@@ -1,54 +1,63 @@
+/* Importing the Poppins font from Google Fonts with different font weights (300, 400, 500, 600) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* Resetting the margin and padding to 0 for all elements to ensure consistency across browsers */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Applying the Poppins font to the body of the document and setting a fallback font of sans-serif */
 body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Enabling smooth scrolling behavior for anchor links or other scroll events on the page */
 html {
   scroll-behavior: smooth;
 }
 
+/* Styling paragraph text with a specific shade of gray */
 p {
   color: rgb(85, 85, 85);
 }
 
-/* TRANSITION */
-
+/* Adding a transition effect for all properties of anchor tags and buttons with a duration of 300ms and easing function */
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
+/* DESKTOP NAVIGATION STYLES */
 
+/* Using Flexbox to layout the navigation and its links in a horizontal row */
 nav,
 .nav-links {
   display: flex;
 }
 
+/* Styling the navigation bar to evenly space its children, vertically center them, and give it a height of 17% of the viewport height */
 nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
 }
 
+/* Styling the navigation links with spacing between them, removing bullet points, and increasing font size */
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
 }
 
+/* Setting the default color of links to black and removing the underline by default, but keeping the underline color as white (which will be invisible) */
 a {
   color: black;
   text-decoration: none;
   text-decoration-color: white;
 }
 
+/* Changing the link color to grey on hover, adding an underline, and adjusting the underline offset and color */
 a:hover {
   color: grey;
   text-decoration: underline;
@@ -56,25 +65,30 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+/* Styling the logo with a larger font size */
 .logo {
   font-size: 2rem;
 }
 
+/* Preventing the cursor from changing when hovering over the logo */
 .logo:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
+/* HAMBURGER MENU STYLES */
 
+/* Hiding the #hamburger-nav element (possibly for accessibility purposes or a different layout) */
 #hamburger-nav {
   display: none;
 }
 
+/* Setting up the hamburger menu as an inline-block element to position it inline with other elements */
 .hamburger-menu {
   position: relative;
   display: inline-block;
 }
 
+/* Styling the hamburger icon as a vertical stack of three lines with spacing in between, and making it clickable */
 .hamburger-icon {
   display: flex;
   flex-direction: column;
@@ -84,6 +98,7 @@ a:hover {
   cursor: pointer;
 }
 
+/* Styling each line (span) within the hamburger icon with full width, a height of 2px, and a black background, with a transition for smooth opening/closing animations */
 .hamburger-icon span {
   width: 100%;
   height: 2px;
@@ -91,17 +106,19 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+/* Defining the hidden state of the dropdown menu that appears when the hamburger menu is clicked */
 .menu-links {
   position: absolute;
-  top: 100%;
+  top: 100%; /* Places the menu right below the hamburger icon */
   right: 0;
   background-color: white;
   width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  max-height: 0; /* Initially hidden */
+  overflow: hidden; /* Ensures hidden content doesn't affect layout */
+  transition: all 0.3 ease-in-out; /* Smooth transition for opening/closing */
 }
 
+/* Styling individual links within the dropdown menu with padding, centered text, black color, and smooth transitions */
 .menu-links a {
   display: block;
   padding: 10px;
@@ -112,34 +129,164 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+/* Removing bullet points from the list items in the dropdown menu */
 .menu-links li {
   list-style: none;
 }
 
+/* Defining the open state of the menu where it expands to a maximum height of 300px */
 .menu-links.open {
   max-height: 300px;
 }
 
+/* Transformations applied to the hamburger icon when the menu is open */
+
+/* Rotating the top line 45 degrees and translating it to create an "X" shape */
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
 
+/* Hiding the middle line */
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
 }
 
+/* Rotating the bottom line -45 degrees and translating it to complete the "X" shape */
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
+/* Ensuring the top line is in its default state when the menu is closed */
 .hamburger-icon span:first-child {
   transform: none;
 }
 
+/* Ensuring the middle line is visible when the menu is closed */
 .hamburger-icon span:first-child {
   opacity: 1;
 }
 
+/* Ensuring the bottom line is in its default state when the menu is closed */
 .hamburger-icon span:first-child {
   transform: none;
+}
+
+/* Sections: Basic styling for all sections */
+section {
+  padding-left: 4vh; /* Adds padding to the left side of the section */
+  height: 96vh; /* Sets the height of the section to 96% of the viewport height */
+  margin: 0 10rem; /* Adds horizontal margin (left and right) of 10rem */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  min-height: fit-content; /* Ensures the section is at least as tall as its content */
+}
+
+/* Section container: Used for section containers to display flex items horizontally */
+.section-container {
+  display: flex; /* Enables flexbox layout */
+}
+
+/* Profile section: Specific styling for the profile section */
+#profile {
+  display: flex; /* Flexbox layout for the profile section */
+  justify-content: center; /* Centers content horizontally */
+  gap: 5rem; /* Adds a gap of 5rem between flex items */
+  height: 80vh; /* Sets the height of the profile section to 80% of the viewport height */
+}
+
+/* Profile picture container: Styling for the container holding the profile picture */
+.section__pic-container {
+  display: flex; /* Flexbox layout for the picture container */
+  height: 400px; /* Fixed height of the container */
+  width: 400px; /* Fixed width of the container */
+  margin: auto 0; /* Centers the container vertically within its parent */
+}
+
+/* Profile text: Aligns the text in the profile section */
+.section__text {
+  align-self: center; /* Vertically centers the text within the flex container */
+  text-align: center; /* Centers the text horizontally */
+}
+
+/* Profile text paragraph: Styling for paragraphs within the text section */
+.section__text p {
+  font-weight: 600; /* Sets the font weight to 600 (semi-bold) */
+}
+
+/* Additional text paragraph styling: First text block */
+.section__text__p1 {
+  text-align: center; /* Centers the text horizontally */
+}
+
+/* Additional text paragraph styling: Second text block */
+.section__text__p2 {
+  font-size: 1.75rem; /* Sets the font size to 1.75rem */
+  margin-bottom: 1rem; /* Adds a bottom margin of 1rem */
+}
+
+/* Title: Styling for titles in the sections */
+.title {
+  font-size: 3rem; /* Sets the font size to 3rem */
+  text-align: center; /* Centers the title text horizontally */
+}
+
+/* Socials container: Aligns social media icons */
+#socials-container {
+  display: flex; /* Flexbox layout for the socials container */
+  justify-content: center; /* Centers the content horizontally */
+  margin-top: 1rem; /* Adds a top margin of 1rem */
+  gap: 1rem; /* Adds a gap of 1rem between flex items */
+}
+
+/* Icons: Styling for clickable icons */
+.icon {
+  cursor: pointer; /* Changes cursor to pointer on hover to indicate clickability */
+  height: 2rem; /* Sets the height of the icons to 2rem */
+}
+
+/* Buttons container: Aligns buttons */
+.btn-container {
+  display: flex; /* Flexbox layout for the buttons container */
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 1rem; /* Adds a gap of 1rem between buttons */
+}
+
+/* Buttons: Base styling for buttons */
+.btn {
+  font-weight: 600; /* Sets the font weight to 600 (semi-bold) */
+  transition: all 300ms ease; /* Smooth transition effect for all properties over 300ms */
+  padding: 1rem; /* Adds padding of 1rem to the buttons */
+  width: 8rem; /* Sets the width of the buttons to 8rem */
+  border-radius: 2rem; /* Rounds the corners of the buttons with a radius of 2rem */
+}
+
+/* Button colors: Specific styles for button color variants */
+.btn-color-1, .btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid; /* Adds a solid border of 0.1rem with a dark grey color */
+}
+
+/* Button hover effects: Changes appearance when hovering over buttons */
+.btn-color-1:hover, .btn-color-2:hover {
+  cursor: pointer; /* Changes cursor to pointer on hover to indicate clickability */
+}
+
+.btn-color-1, .btn-color-2:hover {
+  background-color: rgb(53, 53, 53); /* Changes the background color to dark grey */
+  color: white; /* Changes the text color to white */
+}
+
+.btn-color-1:hover {
+  background-color: rgb(0, 0, 0); /* Changes the background color to black on hover */
+}
+
+.btn-color-2 {
+  background: none; /* No background color for this button variant */
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid; /* Changes the border color to white on hover */
+}
+
+/* Button container correction: Fixes typo and ensures gap between buttons */
+.btn-contianer {
+  gap: 1rem; /* Adds a gap of 1rem between buttons */
 }
