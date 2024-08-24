@@ -468,3 +468,16 @@ article .icon {
 .email-icon {
   height: 2.7rem; /* Sets the height of the email icon to 2.7rem */
 }
+
+/* footer section */
+
+/* Footer: Specific styling for the footer section */
+footer {
+  height: 26vh; /* Sets the height of the footer section to 26% of the viewport height */
+  margin: 0 1rem; /* Adds a margin of 1rem around the footer section */
+}
+
+/* Footer text: Aligns the text in the footer section */
+footer p {
+  text-align: center; /* Centers the text in the footer section */
+}
