@@ -397,26 +397,74 @@ article .icon {
 /* Projects section */
 
 #projects {
-  position:relative;
+  position: relative; /* Sets the positioning context for absolute positioning of child elements */
 }
 
+/* Color container: Sets the border color and background color for containers in the projects section */
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: rgb(163, 163, 163); /* Sets the border color to a light grey */
+  background: rgb(250, 250, 250); /* Sets the background color to a very light grey */
 }
 
+/* Project image: Styling for images within the projects section */
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  border-radius: 2rem; /* Adds a border radius of 2rem for rounded corners */
+  width: 90%; /* Sets the width of the image to 90% of its container */
+  height: 90%; /* Sets the height of the image to 90% of its container */
 }
 
+/* Project title: Styling for project titles */
 .project-title {
-  margin: 1rem;
-  color: black;
+  margin: 1rem; /* Adds a margin of 1rem around the title */
+  color: black; /* Sets the text color to black */
 }
 
+/* Project button: Styling for buttons in the projects section */
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: black; /* Sets the text color to black */
+  border-color: rgb(163, 163, 163); /* Sets the border color to light grey */
+}
+
+/* Contact section: Basic styling for the contact section */
+#contact {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  flex-direction: column; /* Arranges flex items in a column */
+  height: 70vh; /* Sets the height of the contact section to 70% of the viewport height */
+}
+
+/* Upper contact info container: Styling for the top-level container of contact info */
+.contact-info-upper-container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  border-radius: 2rem; /* Adds a border radius of 2rem for rounded corners */
+  border: rgb(53, 53, 53) 0.1rem solid; /* Adds a solid border with a dark grey color */
+  border-color: rgb(163, 163, 163); /* Overrides border color to light grey */
+  background: rgb(250, 250, 250); /* Sets the background color to a very light grey */
+  margin: 2rem auto; /* Adds vertical margin of 2rem and centers horizontally */
+  padding: 0.5rem; /* Adds padding of 0.5rem inside the container */
+}
+
+/* Contact info container: Aligns and spaces elements within the contact info */
+.contact-info-container {
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Vertically centers items within the container */
+  justify-content: center; /* Centers content horizontally */
+  gap: 0.5rem; /* Adds a gap of 0.5rem between flex items */
+  margin: 1rem; /* Adds a margin of 1rem around the container */
+}
+
+/* Paragraphs within the contact info container: Adjusts font size */
+.contact-info-container p {
+  font-size: larger; /* Increases the font size for better readability */
+}
+
+/* Contact icon: Styling for icons within the contact info section */
+.contact-icon {
+  cursor: default; /* Sets cursor to default (non-clickable) */
+}
+
+/* Email icon: Specific styling for the email icon */
+.email-icon {
+  height: 2.7rem; /* Sets the height of the email icon to 2.7rem */
 }
