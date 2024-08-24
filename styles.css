@@ -290,3 +290,108 @@ section {
 .btn-contianer {
   gap: 1rem; /* Adds a gap of 1rem between buttons */
 }
+
+/* about ection */
+
+#about {
+  position: relative; /* Sets the positioning context for absolute positioning of child elements */
+}
+
+/* About containers: Adds margin and gap between elements in the about section */
+.about-containers {
+  gap: 2rem; /* Adds a gap of 2rem between flex items */
+  margin-bottom: 2rem; /* Adds a bottom margin of 2rem */
+  margin-top: 2rem; /* Adds a top margin of 2rem */
+}
+
+/* About details container: Centers content and arranges flex items in a column */
+.about-details-container {
+  justify-content: center; /* Centers content horizontally */
+  flex-direction: column; /* Arranges flex items in a column */
+}
+
+/* Common display styles for about containers and details container */
+.about-containers, .about-details-container {
+  display: flex; /* Enables flexbox layout for both elements */
+}
+
+/* About picture: Rounds the corners of the profile picture */
+.about-pic {
+  border-radius: 2rem; /* Adds a border radius of 2rem for rounded corners */
+}
+
+/* Arrow styling: Positions an arrow element within the about section */
+.arrow {
+  position: absolute; /* Positions the arrow absolutely within its relative parent */
+  right: -5rem; /* Positions the arrow 5rem to the right of its parent */
+  bottom: 2.5rem; /* Positions the arrow 2.5rem above the bottom of its parent */
+}
+
+/* Details container: Styling for a container that holds details in the about section */
+.details-container {
+  padding: 1.5rem; /* Adds padding of 1.5rem inside the container */
+  flex: 1; /* Makes the container take up the available space proportionally */
+  background-color: white; /* Sets the background color to white */
+  border-radius: 2rem; /* Adds a border radius of 2rem for rounded corners */
+  border: rgb(53, 53, 53) 0.1rem solid; /* Adds a solid border with a dark grey color */
+  border-color: rgb(163, 163, 163); /* Sets the border color to a lighter grey */
+  text-align: center; /* Centers the text horizontally */
+}
+
+/* Section container: Adds gap and height to section containers */
+.section-container {
+  gap: 4rem; /* Adds a gap of 4rem between flex items */
+  height: 80%; /* Sets the height of the container to 80% of its parent */
+}
+
+/* Section picture container: Sets dimensions and margin for picture containers */
+.section__pic-container {
+  height: 400px; /* Fixed height of 400px */
+  width: 400px; /* Fixed width of 400px */
+  margin: auto 0; /* Centers the container vertically within its parent */
+}
+
+/* Experience section: Basic styling for the experience section */
+#experience {
+  position: relative; /* Sets the positioning context for absolute positioning of child elements */
+}
+
+/* Experience sub-title: Styling for subtitles within the experience section */
+.experience-sub-title {
+  color: rgb(85, 85, 85); /* Sets the text color to a medium grey */
+  font-weight: 600; /* Sets the font weight to 600 (semi-bold) */
+  font-size: 1.75rem; /* Sets the font size to 1.75rem */
+  margin-bottom: 2rem; /* Adds a bottom margin of 2rem */
+}
+
+/* Experience details container: Centers content and arranges flex items in a column */
+.experience-details-container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  flex-direction: column; /* Arranges flex items in a column */
+}
+
+/* Article container: Arranges articles within the experience section */
+.article-container {
+  display: flex; /* Enables flexbox layout */
+  text-align: initial; /* Resets text alignment to default (left) */
+  flex-wrap: wrap; /* Allows flex items to wrap to the next line */
+  flex-direction: row; /* Arranges flex items in a row */
+  gap: 2.5rem; /* Adds a gap of 2.5rem between articles */
+  justify-content: space-around; /* Distributes articles evenly within the container */
+}
+
+/* Article: Specific styling for individual article elements */
+article {
+  display: flex; /* Enables flexbox layout for the article */
+  width: 10rem; /* Sets the width of the article to 10rem */
+  justify-content: space-around; /* Evenly distributes content within the article */
+  gap: 0.5rem; /* Adds a gap of 0.5rem between elements within the article */
+}
+
+/* Article icons: Styling for icons within articles */
+article .icon {
+  cursor: default; /* Disables the pointer cursor to indicate non-clickability */
+}
+
+/* Projects section */
